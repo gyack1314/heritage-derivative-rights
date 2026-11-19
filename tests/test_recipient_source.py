@@ -1,4 +1,4 @@
-"""Exercise the local recipient source contract using real loopback HTTP."""
+"""通过真实本机 HTTP 核验接收方的来源协议。"""
 import hashlib
 import http.client
 import json

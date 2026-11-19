@@ -1,4 +1,4 @@
-"""Local synthetic recipient. Receives payloads; does not calculate or approve reports."""
+"""本地合成接收方：接收正文，不计算或批准简报。"""
 import argparse,hashlib,json,pathlib,sqlite3
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 
