@@ -106,6 +106,21 @@
       "unique_key": [
         "row_id"
       ]
+    },
+    {
+      "file": "fixtures/participations.jsonl",
+      "rows": 8,
+      "sha256": "324757fe71e16432da3aea730401739e93b810e1a4b4a56988d08715c9fcbf19",
+      "columns": [
+        "activity",
+        "enterprise",
+        "month",
+        "participation_status",
+        "row_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
     }
   ],
   "scope": "本地合成的原始来源观察、业务政策与操作请求。"

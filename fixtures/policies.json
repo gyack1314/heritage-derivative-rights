@@ -15,6 +15,11 @@
       "activity",
       "month",
       "revision"
+    ],
+    "participations": [
+      "enterprise",
+      "activity",
+      "month"
     ]
   },
   "joins": [
@@ -56,5 +61,6 @@
   "money": "人民币分整数；order amount为整单实收基数，line_amount仅为商品行来源声明，不保证相加等于整单金额。商品筛选选择含命中商品的订单集合。退款按最新可见revision，每退款只计一次。",
   "targets": "目标只在企业/活动/月粒度；无日目标或商品分配；不能把全月目标直接与部分天日期过滤比较。不同来源可以在其共有且完整覆盖的维度上比较。目标缺失和目标零分别报告。",
   "results": "除法分母零返回undefined并带原因，缺目标返回unavailable；不能改为0。总计在同授权和筛选范围重新计算。",
-  "delivery": "见tools/recipient.py；POST /deliveries接受id,enterprise,content_sha256,body；同id同正文重复返回原回执，同id不同正文409。GET /deliveries/<id>查询已接受事实。服务可接收后断开响应。"
+  "delivery": "见tools/recipient.py；POST /deliveries接受id,enterprise,content_sha256,body；同id同正文重复返回原回执，同id不同正文409。GET /deliveries/<id>查询已接受事实。服务可接收后断开响应。",
+  "participations": "参展记录是企业/活动/月的静态范围目录；没有销售的参展企业仍保留。仅作身份和活动范围依据，不能将其行数或销售订单数互相替代。"
 }
