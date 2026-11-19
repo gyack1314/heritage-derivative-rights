@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "synthetic": true,
+  "project": "文化经营指标的粒度安全查询与定版分发",
+  "tables": [
+    {
+      "file": "fixtures/orders.jsonl",
+      "rows": 120,
+      "sha256": "18ea8bc342fe5f9849b8c19f42bf4cb4bd194b135a3edfd5880f0353a60e6779",
+      "columns": [
+        "activity",
+        "amount_minor",
+        "currency",
+        "customer",
+        "day",
+        "enterprise",
+        "order_id",
+        "row_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/lines.jsonl",
+      "rows": 240,
+      "sha256": "9ee8b25c5880c8d1fbf6595a9321261a7b10f2b5586d64ebfe30715f2ddeb1bf",
+      "columns": [
+        "craft",
+        "line_amount_minor",
+        "line_id",
+        "order_id",
+        "product",
+        "quantity",
+        "row_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/refunds.jsonl",
+      "rows": 33,
+      "sha256": "ce1cbdf005679e07e0b8c6c37a436785eaa7857224177d111248d541d9b7f396",
+      "columns": [
+        "amount_minor",
+        "line_id",
+        "occurred_day",
+        "received_batch",
+        "refund_id",
+        "revision",
+        "row_id",
+        "status"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/targets.jsonl",
+      "rows": 8,
+      "sha256": "1fd8384d2d40d6764cfdf3283fc4a1822d02342b213944c872c5547bf7134743",
+      "columns": [
+        "activity",
+        "enterprise",
+        "month",
+        "revision",
+        "row_id",
+        "target_minor"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/metric_registrations.jsonl",
+      "rows": 8,
+      "sha256": "5c0212ce06667b1f41f884a7b36931c7982a4325f6c7d2061ea491b5be008024",
+      "columns": [
+        "args",
+        "field",
+        "metric_id",
+        "op",
+        "row_id",
+        "source",
+        "version",
+        "where"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/analysis_requests.jsonl",
+      "rows": 3,
+      "sha256": "17de0b974fe3fab863935deb7abd706bb9b127a2f542a3006d2fd8082b7e4c82",
+      "columns": [
+        "enterprise_allow",
+        "filters",
+        "groups",
+        "metrics",
+        "request_id",
+        "row_id",
+        "total"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    }
+  ],
+  "scope": "本地合成的原始来源观察、业务政策与操作请求。"
+}

@@ -1,0 +1,8 @@
+{"row_id":"targets:000001","enterprise":"E1","activity":"A1","month":"2026-11","target_minor":50000,"revision":1}
+{"row_id":"targets:000002","enterprise":"E1","activity":"A2","month":"2026-11","target_minor":50000,"revision":1}
+{"row_id":"targets:000003","enterprise":"E2","activity":"A1","month":"2026-11","target_minor":100000,"revision":1}
+{"row_id":"targets:000004","enterprise":"E2","activity":"A2","month":"2026-11","target_minor":100000,"revision":1}
+{"row_id":"targets:000005","enterprise":"E3","activity":"A1","month":"2026-11","target_minor":150000,"revision":1}
+{"row_id":"targets:000006","enterprise":"E3","activity":"A2","month":"2026-11","target_minor":150000,"revision":1}
+{"row_id":"targets:000007","enterprise":"E4","activity":"A1","month":"2026-11","target_minor":200000,"revision":1}
+{"row_id":"targets:000008","enterprise":"E4","activity":"A2","month":"2026-11","target_minor":200000,"revision":1}

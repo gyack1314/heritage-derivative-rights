@@ -1,0 +1,8 @@
+{"row_id":"metric_registrations:000001","metric_id":"gross","version":1,"op":"sum","source":"orders","field":"amount_minor"}
+{"row_id":"metric_registrations:000002","metric_id":"order_count","version":1,"op":"count_distinct","source":"orders","field":"order_id"}
+{"row_id":"metric_registrations:000003","metric_id":"buyers","version":1,"op":"count_distinct","source":"orders","field":"customer"}
+{"row_id":"metric_registrations:000004","metric_id":"net","version":1,"op":"subtract","args":["gross","paid_refunds"]}
+{"row_id":"metric_registrations:000005","metric_id":"paid_refunds","version":1,"op":"sum","source":"refunds","field":"amount_minor","where":{"status":"paid"}}
+{"row_id":"metric_registrations:000006","metric_id":"buyer_share","version":1,"op":"divide","args":["buyers",{"metric":"buyers","scope":{"remove_filters":["product","craft"],"remove_groups":["product","craft"]}}]}
+{"row_id":"metric_registrations:000007","metric_id":"target","version":1,"op":"sum","source":"targets","field":"target_minor"}
+{"row_id":"metric_registrations:000008","metric_id":"attainment","version":1,"op":"divide","args":["net","target"]}

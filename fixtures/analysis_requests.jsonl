@@ -1,0 +1,3 @@
+{"row_id":"analysis_requests:000001","request_id":"q-craft","enterprise_allow":["E1"],"groups":["craft"],"filters":{"craft":["embroidery"],"day":["2026-11-01","2026-11-30"]},"metrics":["gross","buyers","buyer_share"],"total":true}
+{"row_id":"analysis_requests:000002","request_id":"q-target-invalid","enterprise_allow":["E1"],"groups":["product"],"filters":{},"metrics":["attainment"],"total":true}
+{"row_id":"analysis_requests:000003","request_id":"q-company","enterprise_allow":["E1","E2"],"groups":["enterprise","month"],"filters":{},"metrics":["attainment","net"],"total":true}

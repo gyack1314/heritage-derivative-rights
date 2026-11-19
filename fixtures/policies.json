@@ -1,0 +1,60 @@
+{
+  "fact_grains": {
+    "orders": [
+      "order_id"
+    ],
+    "lines": [
+      "line_id"
+    ],
+    "refunds": [
+      "refund_id",
+      "revision"
+    ],
+    "targets": [
+      "enterprise",
+      "activity",
+      "month",
+      "revision"
+    ]
+  },
+  "joins": [
+    [
+      "orders.order_id",
+      "lines.order_id",
+      "one_to_many"
+    ],
+    [
+      "lines.line_id",
+      "refunds.line_id",
+      "one_to_many"
+    ]
+  ],
+  "dimension_paths": {
+    "enterprise": [
+      "orders",
+      "targets"
+    ],
+    "activity": [
+      "orders",
+      "targets"
+    ],
+    "month": [
+      "orders.day",
+      "targets.month"
+    ],
+    "day": [
+      "orders.day"
+    ],
+    "product": [
+      "lines.product"
+    ],
+    "craft": [
+      "lines.craft"
+    ]
+  },
+  "registration_contract": "op支持sum/count_distinct/add/subtract/multiply/divide；source/field是公开事实字段；args含指标ID或{metric,scope}；where为字段等值合取；scope只能去除声明的筛选和分组，不能移除授权企业范围。注册版本互相引用时固定到本次选定版本，成环拒绝。",
+  "money": "人民币分整数；order amount为整单实收基数，line_amount仅为商品行来源声明，不保证相加等于整单金额。商品筛选选择含命中商品的订单集合。退款按最新可见revision，每退款只计一次。",
+  "targets": "目标只在企业/活动/月粒度；无日目标或商品分配；不能把全月目标直接与部分天日期过滤比较。不同来源可以在其共有且完整覆盖的维度上比较。目标缺失和目标零分别报告。",
+  "results": "除法分母零返回undefined并带原因，缺目标返回unavailable；不能改为0。总计在同授权和筛选范围重新计算。",
+  "delivery": "见tools/recipient.py；POST /deliveries接受id,enterprise,content_sha256,body；同id同正文重复返回原回执，同id不同正文409。GET /deliveries/<id>查询已接受事实。服务可接收后断开响应。"
+}
